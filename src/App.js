@@ -1,25 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import UserInput from "./UserInput/UserInput";
+import UserOutput from "./UserOutput/UserOutput";
 
 class App extends Component {
+  state = {
+    name: "Deb"
+  };
+
+  nameChangedHandler = event => {
+    this.setState({
+      name: event.target.value
+    });
+  };
+
   render() {
+    const style = {
+      textAlign: "center",
+      color: "#6545d8"
+    };
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1 style={style}>Assignment 1: React the Complete Guide</h1>
+        <UserInput name={this.state.name} changed={this.nameChangedHandler} />
+        <UserOutput name={this.state.name} />
+        <UserOutput name={this.state.name} />
+        <UserOutput name={this.state.name} />
       </div>
     );
   }
