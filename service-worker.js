@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/debracupitt/ReactAss1.git/precache-manifest.9b074994762704adfab199ae7a44c8d2.js"
+  "/debracupitt/ReactAss1/precache-manifest.9303f0ae31f471e7ba0471b495f2a2b7.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/debracupitt/ReactAss1.git/index.html", {
+workbox.routing.registerNavigationRoute("/debracupitt/ReactAss1/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
